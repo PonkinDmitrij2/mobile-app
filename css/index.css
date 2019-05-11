@@ -143,28 +143,23 @@ img {
     $PAGE-1
 \*------------------------------------*/
 
-.content__photo {
+.photo-box {
   width: 50%;
   margin: 0 auto 12px;
 }
 
-
-
-/*------------------------------------*\
-    $MODAL
-\*------------------------------------*/
-
-.modal {
+.photo-box--overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  width: initial;
+  margin: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modal__image {
+.photo-box__image--full {
   position: absolute;
   top: 0;
   left: 0;
@@ -174,7 +169,11 @@ img {
   z-index: 10;
 }
 
-.modal__close {
+.photo-box__close {
+  display: none;
+}
+
+.photo-box__close--show {
   position: absolute;
   top: 0;
   right: 0;
