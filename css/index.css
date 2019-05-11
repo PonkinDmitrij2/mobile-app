@@ -33,6 +33,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  padding-top: 50px;
   color: #141913;
   background-color: #f3e5f5;
 }
@@ -67,10 +68,6 @@ body {
 
 .page-header__link {
   display: flex;
-}
-
-.main-nav {
-  margin-top: 50px;
 }
 
 .nav-link {
