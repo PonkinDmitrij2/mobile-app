@@ -6,7 +6,6 @@ const PHOTO_BOX_OVERLAY = `${PHOTO_BOX}--overlay`;
 const PHOTO_BOX_IMG_FULL = `${PHOTO_BOX}__image--full`;
 const PHOTO_BOX_CLOSE_SHOWN = `${PHOTO_BOX}__close--show`;
 const images = document.querySelectorAll(`.${PHOTO_BOX_IMG}`);
-console.log(images);
 
 images.forEach((photo) => {
   photo.addEventListener('click', handlerPhotoFull);
