@@ -129,19 +129,13 @@ img {
 
 
 /*------------------------------------*\
-    $PAGE-INFO
+    $INNER PAGES
 \*------------------------------------*/
 
 .content__text {
   margin: 0;
   margin-bottom: 12px;
 }
-
-
-
-/*------------------------------------*\
-    $PAGE-1
-\*------------------------------------*/
 
 .photo-box {
   width: 50%;
@@ -170,18 +164,18 @@ img {
 }
 
 .photo-box__close {
-  display: none;
-}
-
-.photo-box__close--show {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 20;
-  display: flex;
+  display: none;
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.photo-box__close--show {
+  display: flex;
 }
 
 
