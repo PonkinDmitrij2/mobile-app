@@ -17,7 +17,7 @@ html {
   width: 100%;
   height: 100%;
   font-family: "Roboto", Arial, "Helvetica CY", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.3;
   font-weight: 400;
   word-wrap: break-word;
@@ -75,6 +75,7 @@ img {
 .page-header__text {
   margin: 0 auto;
   font-size: 17px;
+  text-transform: uppercase;
 }
 
 .page-header__link {
@@ -112,6 +113,7 @@ img {
 .main-nav__text {
   flex-grow: 1;
   margin: 0;
+  text-transform: uppercase;
 }
 
 
