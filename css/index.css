@@ -81,7 +81,7 @@ img {
   display: flex;
 }
 
-.nav-link {
+.main-nav__link {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -89,39 +89,27 @@ img {
   color: inherit;
 }
 
-.nav-link:active {
+.main-nav__link:active {
   background-color: #cc8ed6;
 }
 
-.nav-link__picture {
+.main-nav__img-wrap {
+  display: flex;
   flex-shrink: 0;
   width: 92px;
   height: 92px;
   margin-right: 20px;
   border: 3px solid #cc8ed6;
   border-radius: 50%;
+  background-color: #cc8ed6;
+  overflow: hidden;
 }
 
-.nav-link__picture--1 {
-  background: #cc8ed6 url("../img/baby-1.jpg") 0 0 / cover no-repeat;
-}
-.nav-link__picture--2 {
-  background: #cc8ed6 url("../img/baby-2.jpg") 0 0 / cover no-repeat;
-}
-.nav-link__picture--3 {
-  background: #cc8ed6 url("../img/baby-3.jpg") 0 0 / cover no-repeat;
-}
-.nav-link__picture--4 {
-  background: #cc8ed6 url("../img/baby-1.jpg") 0 0 / cover no-repeat;
-}
-.nav-link__picture--5 {
-  background: #cc8ed6 url("../img/baby-2.jpg") 0 0 / cover no-repeat;
-}
-.nav-link__picture--6 {
-  background: #cc8ed6 url("../img/baby-3.jpg") 0 0 / cover no-repeat;
+.main-nav__image {
+  object-fit: cover;
 }
 
-.nav-link__text {
+.main-nav__text {
   flex-grow: 1;
   margin: 0;
 }
