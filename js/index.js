@@ -1,29 +1,30 @@
 'use strict';
 
-const PHOTO_BOX = `photo-box`;
-const PHOTO_BOX_IMG = `${PHOTO_BOX}__image`;
-const PHOTO_BOX_OVERLAY = `${PHOTO_BOX}--overlay`;
-const PHOTO_BOX_IMG_FULL = `${PHOTO_BOX}__image--full`;
-const PHOTO_BOX_CLOSE_SHOWN = `${PHOTO_BOX}__close--show`;
-const images = document.querySelectorAll(`.${PHOTO_BOX_IMG}`);
+const CONTENT = `content`;
+const IMAGE = `photo-box__image`;
+const IMAGE_FULL = `${IMAGE}--full`;
+const CLOSE = `photo-box__close`;
+const CLOSE_SHOWN = `${CLOSE}--show`;
+const OVERLAY = `photo-box--overlay`;
+const content = document.querySelector(`.${CONTENT}`);
 
-images.forEach((photo) => {
-  photo.addEventListener('click', handlerPhotoFull);
-});
+const handlerPhotoFull = (event) => {
+  if (event.target.classList.contains(IMAGE)) {
+    const parentBox = event.target.parentElement;
+    const btnClose = parentBox.querySelector(`.${CLOSE}`);
 
-function handlerPhotoFull() {
-  const parentBox = this.parentElement;
-  const btnClose = this.nextElementSibling;
+    parentBox.classList.add(OVERLAY);
+    event.target.classList.add(IMAGE_FULL);
+    btnClose.classList.add(CLOSE_SHOWN);
 
-  parentBox.classList.add(PHOTO_BOX_OVERLAY);
-  this.classList.add(PHOTO_BOX_IMG_FULL);
-  btnClose.classList.add(PHOTO_BOX_CLOSE_SHOWN);
+    const closeFullImg = () => {
+      parentBox.classList.remove(OVERLAY);
+      event.target.classList.remove(IMAGE_FULL);
+      btnClose.classList.remove(CLOSE_SHOWN);
+    };
 
-  const closeFullImg = () => {
-    parentBox.classList.remove(PHOTO_BOX_OVERLAY);
-    this.classList.remove(PHOTO_BOX_IMG_FULL);
-    btnClose.classList.remove(PHOTO_BOX_CLOSE_SHOWN);
-  };
+    btnClose.addEventListener('click', closeFullImg);
+  }
+};
 
-  btnClose.addEventListener('click', closeFullImg);
-}
+content.addEventListener('click', handlerPhotoFull);
